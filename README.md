@@ -12,6 +12,29 @@ Want more detail? John Blanco has authored a [detailed writeup about mogenerator
 
 Senseful wrote up a [nice summary of mogenerator's command-line options](http://stackoverflow.com/questions/3589247/how-do-the-mogenerator-parameters-work-which-can-i-send-via-xcode).
 
+### Examples
+
+Usage for Swift with custom templates:
+
+```
+mogenerator --model <PATH_TO_MODEL.xcdatamodeld> \
+            --template-path <PATH_TO_CUSTOM_TEMPLATES> \
+            --machine-dir <MACHINE_DIR> \
+            --human-dir <HUMAN_DIR> \
+            --swift
+```
+
+If you have multiple templates in your custom template path, specify the name using `--template-group`,
+
+```
+mogenerator --model <PATH_TO_MODEL.xcdatamodeld> \
+            --template-path <PATH_TO_CUSTOM_TEMPLATES> \
+            --template-group <NAME> \
+            --machine-dir <MACHINE_DIR> \
+            --human-dir <HUMAN_DIR> \
+            --swift
+```
+
 ## Version History
 
 ### v1.31: Mon Oct 3 2016 [download](https://github.com/rentzsch/mogenerator/releases/download/1.31/mogenerator-1.31.dmg)
